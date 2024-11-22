@@ -23,7 +23,7 @@ uploaded_file = st.sidebar.file_uploader("Select image from your folder...", typ
 @st.cache_resource
 def load_model_axial():
     model_axial = torch.hub.load(
-        repo_or_dir='./pages/yolov5/',  # Укажите путь к папке с YOLOv5
+        repo_or_dir='./pages/yolov5/hubconf.py',  # Укажите путь к папке с YOLOv5
         model='custom',
         path='pages/brain_tumor_axial_best.pt',
         source='local'
@@ -74,7 +74,7 @@ uploaded_file = st.sidebar.file_uploader("Select image from your folder...", typ
 @st.cache_resource
 def load_model_coronal():
     model_coronal = torch.hub.load(
-        repo_or_dir='./pages/yolov5/',  # Укажите путь к папке с YOLOv5
+        repo_or_dir='./pages/yolov5/hubconf.py',  # Укажите путь к папке с YOLOv5
         model='custom',
         path='pages/brain_tumor_coronal_best.pt',
         source='local'
@@ -126,7 +126,7 @@ uploaded_file = st.sidebar.file_uploader("Select image from your folder...", typ
 @st.cache_resource
 def load_model_sagittal():
     model_sagittal = torch.hub.load(
-        repo_or_dir='./pages/yolov5/',  # Укажите путь к папке с YOLOv5
+        repo_or_dir='./pages/yolov5/hubconf.py',  # Укажите путь к папке с YOLOv5
         model='custom',
         path='pages/brain_tumor_sagittal_best.pt',
         source='local'
