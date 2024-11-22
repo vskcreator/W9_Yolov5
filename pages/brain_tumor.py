@@ -9,7 +9,7 @@ import torchvision
 from torchvision.io import read_image
 import torchvision.transforms as T
 import requests
-from io import BytesIO
+# pip install opencv-python
 
 st.title("YOLOv5 Brain tumor detection")
 
