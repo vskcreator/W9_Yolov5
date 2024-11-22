@@ -23,15 +23,11 @@ uploaded_file = st.sidebar.file_uploader("Select image from your folder...", typ
 @st.cache_resource
 def load_model_axial():
     model_axial = torch.hub.load(
-        # будем работать с локальной моделью в текущей папке
-        repo_or_dir = '/Users/vladislavkravchenko/Desktop/WORK_IT/1.Elbrus_Bootcamp/3.Phase2/9W/9.4./3.Streamlit/pythonProject/yolov5',
-        # непредобученная – будем подставлять свои веса
-        model = 'custom',
-        # путь к нашим весам
-        path='/Users/vladislavkravchenko/Desktop/WORK_IT/1.Elbrus_Bootcamp/3.Phase2/9W/9.4./3.Streamlit/pythonProject/yolov5/1.Top_yolo/1.axial_t1wce_2_class/exp2_b20_ep200/weights/best.pt',
-        # откуда берем модель – наша локальная
+        repo_or_dir='pages/yolov5',  # Укажите путь к папке с YOLOv5
+        model='custom',
+        path='pages/brain_tumor_axial_best.pt',
         source='local'
-        )
+    )
     return model_axial
 # Variable for model #
 model_axial = load_model_axial()
@@ -78,13 +74,9 @@ uploaded_file = st.sidebar.file_uploader("Select image from your folder...", typ
 @st.cache_resource
 def load_model_coronal():
     model_coronal = torch.hub.load(
-        # будем работать с локальной моделью в текущей папке
-        repo_or_dir = '/Users/vladislavkravchenko/Desktop/WORK_IT/1.Elbrus_Bootcamp/3.Phase2/9W/9.4./3.Streamlit/pythonProject/yolov5',
-        # непредобученная – будем подставлять свои веса
-        model = 'custom',
-        # путь к нашим весам
-        path='/Users/vladislavkravchenko/Desktop/WORK_IT/1.Elbrus_Bootcamp/3.Phase2/9W/9.4./3.Streamlit/pythonProject/yolov5/1.Top_yolo/2.coronal_t1wce_2_class/exp2_b20_ep200/weights/best.pt',
-        # откуда берем модель – наша локальная
+        repo_or_dir='pages/yolov5',  # Укажите путь к папке с YOLOv5
+        model='custom',
+        path='pages/brain_tumor_coronal_best.pt',
         source='local'
         )
     return model_coronal
@@ -134,13 +126,9 @@ uploaded_file = st.sidebar.file_uploader("Select image from your folder...", typ
 @st.cache_resource
 def load_model_sagittal():
     model_sagittal = torch.hub.load(
-        # будем работать с локальной моделью в текущей папке
-        repo_or_dir = '/Users/vladislavkravchenko/Desktop/WORK_IT/1.Elbrus_Bootcamp/3.Phase2/9W/9.4./3.Streamlit/pythonProject/yolov5',
-        # непредобученная – будем подставлять свои веса
-        model = 'custom',
-        # путь к нашим весам
-        path='/Users/vladislavkravchenko/Desktop/WORK_IT/1.Elbrus_Bootcamp/3.Phase2/9W/9.4./3.Streamlit/pythonProject/yolov5/1.Top_yolo/3.sagittal_t1wce_2_class/exp2_b20_ep200/weights/best.pt',
-        # откуда берем модель – наша локальная
+        repo_or_dir='pages/yolov5',  # Укажите путь к папке с YOLOv5
+        model='custom',
+        path='pages/brain_tumor_sagittal_best.pt',
         source='local'
         )
     return model_sagittal
